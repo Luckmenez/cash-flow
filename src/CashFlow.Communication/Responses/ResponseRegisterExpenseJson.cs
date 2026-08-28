@@ -1,4 +1,4 @@
-namespace CashFlow.Application.UseCases.Expenses;
+namespace CashFlow.Communication.Responses;
 
 public class ResponseRegisterExpenseJson
 {
