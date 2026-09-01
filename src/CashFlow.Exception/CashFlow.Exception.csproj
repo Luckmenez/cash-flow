@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="ResourceErrorMessages.resx">
+      <Generator>MSBuild:Compile</Generator>
+      <StronglyTypedFileName>ResourceErrorMessages.Designer.cs</StronglyTypedFileName>
+      <StronglyTypedLanguage>CSharp</StronglyTypedLanguage>
+      <StronglyTypedNamespace>CashFlow.Exception</StronglyTypedNamespace>
+      <StronglyTypedClassName>ResourceErrorMessages</StronglyTypedClassName>
+      <PublicClass>true</PublicClass>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
