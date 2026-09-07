@@ -9,6 +9,7 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/CashFlow.Validators.Test/Valitators.Test.csproj" />
+    <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" />
   </Folder>
 </Solution>
  
