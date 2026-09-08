@@ -1,6 +1,3 @@
 namespace CashFlow.Exception.ExpeptionBase;
 
-public abstract class CashFlowException : SystemException
-{
-
-}
+public abstract class CashFlowException : SystemException { }

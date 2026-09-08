@@ -1,5 +1,6 @@
 using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.CommonTestUtilities.Requests;
+using CashFlow.Exception;
 using Shouldly;
 
 namespace Validators.Tests.Expenses.Register;
@@ -31,5 +32,8 @@ public class RegisterExpensesValidatorTests
 
         //Assert
         result.IsValid.ShouldBeFalse();
+        result
+            .Errors.ShouldHaveSingleItem()
+            .ErrorMessage.ShouldBe(ResourceErrorMessages.TITLE_REQUIRED);
     }
 }
