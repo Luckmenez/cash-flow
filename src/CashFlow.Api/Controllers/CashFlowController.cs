@@ -4,7 +4,5 @@ namespace CashFlow.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CashFlowController : ControllerBase
-    {
-    }
+    public class CashFlowController : ControllerBase { }
 }

@@ -2,15 +2,15 @@ using System.Globalization;
 
 namespace CashFlow.Api.Middleware;
 
-
-
 public class CultureMiddleware
 {
     private readonly RequestDelegate _next;
+
     public CultureMiddleware(RequestDelegate next)
     {
         _next = next;
     }
+
     public async Task Invoke(HttpContext context)
     {
         var supportedCultures = CultureInfo.GetCultures(CultureTypes.AllCultures).ToList();
@@ -18,7 +18,10 @@ public class CultureMiddleware
 
         var cultureInfo = new CultureInfo("en");
 
-        if (!string.IsNullOrWhiteSpace(requestedCulture) && supportedCultures.Exists(c => c.Name.Equals(requestedCulture)))
+        if (
+            !string.IsNullOrWhiteSpace(requestedCulture)
+            && supportedCultures.Exists(c => c.Name.Equals(requestedCulture))
+        )
         {
             cultureInfo = new CultureInfo(requestedCulture);
         }
